@@ -2,14 +2,9 @@ name: Sleep Action
 
 description: 'Sleep for a specified amount of time'
 
-inputs:
-  sleep-time:
-    description: 'Time in seconds to sleep for'
-    required: true
-
 runs:
   using: "composite"
   steps:
     - name: Sleep for input time
       shell: bash
-      run: sleep ${{ inputs.sleep-time }}
+      run: sleep 60
